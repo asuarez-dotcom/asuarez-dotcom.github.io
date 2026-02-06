@@ -6,8 +6,8 @@
     <title>AG Multi-Services | Innovación Accesible en PR</title>
     <style>
         :root {
-            --azul-marino: #002B5B;
-            --dorado: #C5A059;
+            --azul-marino: #002B5B; /* El azul de tu marca */
+            --dorado: #C5A059;      /* El dorado de tu logo */
             --blanco: #ffffff;
             --gris-claro: #f4f6f8;
             --texto-oscuro: #1a1a1a;
@@ -22,55 +22,67 @@
             line-height: 1.6;
         }
 
-        /* --- NAVEGACIÓN Y LOGO (AJUSTADO) --- */
+        /* --- NAVEGACIÓN Y LOGO (MODIFICADO) --- */
         nav {
             background-color: var(--azul-marino);
-            padding: 15px 0; /* Reduje el espacio vertical */
+            /* Más espacio arriba para que el logo respire */
+            padding: 40px 20px 0px; 
             text-align: center;
-            border-bottom: 4px solid var(--dorado);
+            /* Quitamos el borde inferior para unirlo visualmente al header */
+            border-bottom: none; 
         }
 
-        .logo-container {
-             width: 140px;  /* MUCHO MÁS PEQUEÑO (antes 280px) */
-             height: 140px;
-             margin: 0 auto;
-             border-radius: 50%;
-             border: 3px solid var(--dorado);
-             overflow: hidden;
+        /* NUEVO CONTENEDOR ANCHO PARA EL LOGO */
+        .logo-wrapper-wide {
+             width: 95%;
+             max-width: 550px; /* Controla qué tan ancho se ve como máximo */
+             margin: 0 auto; /* Centrado */
              background-color: var(--blanco);
+             /* Bordes redondeados elegantes en vez de círculo */
+             border-top-left-radius: 20px;
+             border-top-right-radius: 20px;
+             border: 4px solid var(--dorado);
+             border-bottom: none; /* Se une al header azul */
+             padding: 15px;
+             box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
              display: flex;
-             align-items: center;
              justify-content: center;
-             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+             align-items: center;
+             overflow: hidden; /* Corta el exceso de espacio blanco */
+             position: relative;
+             top: 2px; /* Pequeño ajuste para tapar la unión */
         }
 
-        .logo-img {
-            max-width: 90%; /* El logo llena bien el círculo pequeño */
+        .logo-img-wide {
+            width: 100%;
             height: auto;
             display: block;
+            /* TRUCO CLAVE: Esto hace "zoom" a la imagen para cortar 
+               el espacio blanco sobrante que trae el PNG original */
+            transform: scale(1.35); 
         }
 
-        /* --- HERO SECTION (Portada AJUSTADA) --- */
+        /* --- HERO SECTION (Portada MODIFICADA) --- */
         header {
-            background: linear-gradient(rgba(0, 43, 91, 0.95), rgba(0, 43, 91, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 43, 91, 0.98), rgba(0, 43, 91, 0.92)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
-            background-position: center;
+            background-position: top center;
             color: var(--blanco);
-            padding: 80px 20px; /* Reduje un poco el padding */
+            /* Ajuste de padding porque quitamos el H1 */
+            padding: 30px 20px 100px; 
             text-align: center;
+            border-top: 4px solid var(--dorado);
         }
 
-        /* H1 eliminado del CSS porque ya no se usa en el HTML */
-
+        /* Estilo del slogan más grande y protagonista */
         .tagline {
-            font-size: 2.2em; /* Aumenté el tamaño porque ahora es el texto principal */
-            font-weight: 700;
-            max-width: 800px;
+            font-size: 2.2em; /* Mucho más grande */
+            font-weight: 700; /* Negrita */
+            max-width: 900px;
             margin: 0 auto;
-            /* Borde superior eliminado */
-            color: var(--dorado);
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: var(--dorado);
         }
 
         /* --- SECCIONES PRINCIPALES (SIN CAMBIOS) --- */
@@ -90,6 +102,7 @@
             margin-right: auto;
         }
 
+        /* Misión y Visión Estilizadas */
         .mv-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -112,6 +125,7 @@
             text-transform: uppercase;
         }
 
+        /* Servicios Simplificados */
         .servicios-section {
             background-color: var(--azul-marino);
             color: var(--blanco);
@@ -146,6 +160,7 @@
             margin-bottom: 15px;
         }
 
+        /* Footer */
         footer {
             background-color: #0a1a2a;
             color: #aaa;
@@ -154,6 +169,7 @@
             font-size: 0.9em;
         }
 
+        /* Botón Flotante WhatsApp */
         .wa-float {
             position: fixed;
             bottom: 30px;
@@ -177,16 +193,17 @@
 
         @media (max-width: 768px) {
             .mv-grid { grid-template-columns: 1fr; }
-            .tagline { font-size: 1.6em; }
+            .tagline { font-size: 1.5em; }
             .intro-text { font-size: 1.1em; }
+            .logo-wrapper-wide { width: 90%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo-container">
-            <img src="logo.png.png" alt="Logo AG Multi-Services" class="logo-img">
+        <div class="logo-wrapper-wide">
+            <img src="logo.png.png" alt="Logo AG Multi-Services" class="logo-img-wide">
         </div>
     </nav>
 
