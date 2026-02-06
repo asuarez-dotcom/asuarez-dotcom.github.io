@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AG Multi-Services | Soluciones Reales en PR</title>
+    <title>AG Multi-Services | Innovación Accesible en PR</title>
     <style>
         :root {
             --azul-marino: #002B5B; /* El azul de tu marca */
@@ -28,55 +28,71 @@
             padding: 20px 0;
             text-align: center;
             border-bottom: 4px solid var(--dorado);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+             width: 160px; /* Un poco más grande para que luzca */
+             height: 160px;
+             margin: 0 auto;
+             border-radius: 50%;
+             border: 3px solid var(--dorado);
+             overflow: hidden;
+             background-color: var(--blanco); /* Fondo blanco para que el dorado resalte */
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .logo-img {
-            max-width: 180px; /* Ajuste para que el logo se vea elegante */
+            max-width: 85%; 
             height: auto;
             display: block;
-            margin: 0 auto;
-            border-radius: 50%; /* Opcional: si quieres que el logo se vea circular */
-            border: 2px solid var(--dorado);
         }
 
         /* --- HERO SECTION (Portada) --- */
         header {
-            background: linear-gradient(rgba(0, 43, 91, 0.9), rgba(0, 43, 91, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 43, 91, 0.95), rgba(0, 43, 91, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--blanco);
-            padding: 120px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
 
         h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 15px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dorado);
         }
 
         .tagline {
-            font-size: 1.5em;
-            color: var(--dorado);
+            font-size: 1.8em;
             font-weight: 300;
             max-width: 800px;
             margin: 0 auto;
+            border-top: 1px solid var(--dorado);
+            padding-top: 20px;
         }
 
         /* --- SECCIONES PRINCIPALES --- */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
             padding: 60px 20px;
         }
 
         .intro-text {
             text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 50px;
-            color: #555;
+            font-size: 1.3em;
+            margin-bottom: 60px;
+            color: #444;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Misión y Visión Estilizadas */
@@ -90,14 +106,9 @@
         .mv-card {
             background: var(--gris-claro);
             padding: 40px;
-            border-radius: 8px;
-            border-left: 5px solid var(--dorado);
-            transition: transform 0.3s ease;
-        }
-
-        .mv-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            border-top: 5px solid var(--dorado);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .mv-card h2 {
@@ -111,35 +122,43 @@
         .servicios-section {
             background-color: var(--azul-marino);
             color: var(--blanco);
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
         }
 
         .servicios-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
             margin: 40px auto 0;
         }
 
         .servicio-item {
             background: rgba(255,255,255,0.05);
-            padding: 20px;
-            border: 1px solid var(--dorado);
-            border-radius: 5px;
+            padding: 25px 20px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .servicio-item:hover {
+            background: rgba(197, 160, 89, 0.1);
+            border-color: var(--dorado);
         }
 
         .servicio-item h3 {
             color: var(--dorado);
+            font-size: 1.3em;
+            margin-bottom: 15px;
         }
 
         /* Footer */
         footer {
-            background-color: #111;
-            color: #888;
+            background-color: #0a1a2a;
+            color: #aaa;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             font-size: 0.9em;
         }
 
@@ -150,11 +169,11 @@
             right: 30px;
             background-color: #25D366;
             color: white;
-            padding: 15px 20px;
+            padding: 15px 25px;
             border-radius: 50px;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
             font-size: 1.1em;
             z-index: 100;
             transition: 0.3s;
@@ -162,51 +181,52 @@
 
         .wa-float:hover {
             background-color: #1ebe57;
-            transform: scale(1.05);
+            transform: translateY(-3px);
         }
 
-        /* Responsivo (Celulares) */
         @media (max-width: 768px) {
             .mv-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 2em; }
-            .tagline { font-size: 1.2em; }
+            h1 { font-size: 2.2em; }
+            .tagline { font-size: 1.4em; }
+            .intro-text { font-size: 1.1em; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <img src="logo.jpg" alt="Logo AG Multi-Services" class="logo-img">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo AG Multi-Services" class="logo-img">
+        </div>
     </nav>
 
     <header>
         <h1>AG MULTI-SERVICES</h1>
-        <p class="tagline">Resolver lo que otros complican.</p>
+        <p class="tagline">Innovación Accesible y Funcional.</p>
     </header>
 
     <div class="container">
         <p class="intro-text">
-            Somos una firma puertorriqueña dedicada a simplificar la vida operativa de individuos y negocios. 
-            Actuamos como el puente necesario entre la tecnología, la administración y tus necesidades reales.
+            Somos un pequeño negocio en constante innovación, buscando ofrecer a otros negocios y personas opciones accesibles, organizadas y funcionales. Nuestra meta es expandir servicios sin límites para simplificar tu operación.
         </p>
 
         <div class="mv-grid">
             <div class="mv-card">
                 <h2>Nuestra Misión</h2>
-                <p>Brindar soluciones prácticas, confiables y accesibles. Ayudamos a personas y pequeños negocios a resolver esas gestiones administrativas y tecnológicas que quitan tiempo, claridad y energía.</p>
-                <p><strong>Existimos para acompañarte de manera cercana, con transparencia y resultados reales, sin complicaciones innecesarias.</strong></p>
+                <p>Brindar soluciones prácticas y accesibles. Ayudamos a personas y pequeños negocios a resolver gestiones que consumen tiempo y energía, desde trámites administrativos hasta retos tecnológicos.</p>
+                <p><strong>Existimos para acompañarte con transparencia y resultados reales, haciendo que lo complejo se vuelva funcional y organizado.</strong></p>
             </div>
             
             <div class="mv-card">
                 <h2>Nuestra Visión</h2>
-                <p>Ser reconocidos en Puerto Rico como el estándar de confiabilidad y trato humano. Aspiramos a ser el primer nombre en el que pienses cuando necesites ayuda práctica bien hecha.</p>
-                <p><strong>Queremos construir un ecosistema sostenible que genere estabilidad y crecimiento, demostrando que el orden y la tecnología pueden ser accesibles para todos.</strong></p>
+                <p>Ser reconocidos en Puerto Rico por nuestra versatilidad y crecimiento constante. Aspiramos a crear un ecosistema sostenible de servicios que genere estabilidad, demostrando que la innovación está al alcance de todos.</p>
+                <p><strong>Buscamos ser ese puente confiable que siempre tiene una solución nueva para ti, expandiendo lo que es posible hacer juntos.</strong></p>
             </div>
         </div>
     </div>
 
     <div class="servicios-section">
-        <h2 style="color: white; border-bottom: 2px solid var(--dorado); display: inline-block; padding-bottom: 10px;">Áreas de Enfoque</h2>
+        <h2 style="color: white; text-transform: uppercase; letter-spacing: 1px;">Ecosistema de Servicios en Expansión</h2>
         <div class="servicios-grid">
             <div class="servicio-item">
                 <h3>Gestión Administrativa</h3>
@@ -214,26 +234,30 @@
             </div>
             <div class="servicio-item">
                 <h3>Soporte Tecnológico</h3>
-                <p>Soluciones digitales, automatización y asistencia técnica sin tecnicismos.</p>
+                <p>Soluciones digitales, automatización y asistencia técnica funcional y organizada.</p>
             </div>
             <div class="servicio-item">
                 <h3>Logística Operativa</h3>
-                <p>Apoyo práctico y transporte ligero para mantener tu operación en movimiento.</p>
+                <p>Apoyo práctico, transporte ligero y soluciones de movimiento inmediatas.</p>
+            </div>
+            <div class="servicio-item" style="border-color: var(--dorado);">
+                <h3>Hospitalidad y Eventos</h3>
+                <p>Coordinación de personal (meseros, bartenders) y DJs para crear experiencias memorables.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 AG Multi-Services, LLC. San Juan, Puerto Rico.</p>
-        <p><em>Accesibilidad • Confianza • Resultados</em></p>
-        <div style="margin-top: 20px;">
-            <a href="https://instagram.com/agservicespr" style="color: var(--dorado); text-decoration: none; margin: 0 10px;">Instagram</a>
-            <a href="https://facebook.com/agservices" style="color: var(--dorado); text-decoration: none; margin: 0 10px;">Facebook</a>
+        <p>&copy; 2026 AG Multi-Services, LLC. Puerto Rico.</p>
+        <p><em>Innovando para hacerte la vida más fácil.</em></p>
+        <div style="margin-top: 25px;">
+            <a href="https://instagram.com/agservicespr" style="color: var(--dorado); text-decoration: none; margin: 0 15px; font-weight: bold;">Instagram</a> |
+            <a href="https://facebook.com/agservices" style="color: var(--dorado); text-decoration: none; margin: 0 15px; font-weight: bold;">Facebook</a>
         </div>
     </footer>
 
     <a href="https://wa.me/19397879594" class="wa-float">
-        Contactar por WhatsApp
+        Conectar por WhatsApp
     </a>
 
 </body>
