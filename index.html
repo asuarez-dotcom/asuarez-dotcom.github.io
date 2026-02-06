@@ -11,6 +11,7 @@
             --blanco: #ffffff;
             --gris-claro: #f4f6f8;
             --texto-oscuro: #1a1a1a;
+            --sombra-dorada: rgba(197, 160, 89, 0.3);
         }
 
         body {
@@ -19,183 +20,216 @@
             padding: 0;
             color: var(--texto-oscuro);
             background-color: var(--blanco);
-            line-height: 1.6;
+            line-height: 1.7; /* Mayor interlineado para mejor lectura */
         }
 
-        /* --- NAVEGACIÓN Y LOGO (MODIFICADO) --- */
+        /* --- NAVEGACIÓN Y LOGO (ENORME) --- */
         nav {
             background-color: var(--azul-marino);
-            /* Más espacio arriba para que el logo respire */
-            padding: 40px 20px 0px; 
+            /* Más espacio para el logo grande */
+            padding: 50px 20px 0px; 
             text-align: center;
-            /* Quitamos el borde inferior para unirlo visualmente al header */
             border-bottom: none; 
         }
 
-        /* NUEVO CONTENEDOR ANCHO PARA EL LOGO */
+        /* CONTENEDOR DEL LOGO MÁS GRANDE */
         .logo-wrapper-wide {
-             width: 95%;
-             max-width: 550px; /* Controla qué tan ancho se ve como máximo */
-             margin: 0 auto; /* Centrado */
+             width: 92%;
+             max-width: 700px; /* AUMENTADO de 550px a 700px */
+             margin: 0 auto;
              background-color: var(--blanco);
-             /* Bordes redondeados elegantes en vez de círculo */
-             border-top-left-radius: 20px;
-             border-top-right-radius: 20px;
+             border-top-left-radius: 25px;
+             border-top-right-radius: 25px;
              border: 4px solid var(--dorado);
-             border-bottom: none; /* Se une al header azul */
-             padding: 15px;
-             box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+             border-bottom: none;
+             padding: 25px; /* Mayor padding interno */
+             box-shadow: 0 -10px 30px rgba(0,0,0,0.25);
              display: flex;
              justify-content: center;
              align-items: center;
-             overflow: hidden; /* Corta el exceso de espacio blanco */
+             overflow: hidden;
              position: relative;
-             top: 2px; /* Pequeño ajuste para tapar la unión */
+             top: 3px;
         }
 
         .logo-img-wide {
             width: 100%;
             height: auto;
             display: block;
-            /* TRUCO CLAVE: Esto hace "zoom" a la imagen para cortar 
-               el espacio blanco sobrante que trae el PNG original */
-            transform: scale(1.35); 
+            /* MAYOR ZOOM para que llene el espacio */
+            transform: scale(1.6); 
         }
 
-        /* --- HERO SECTION (Portada MODIFICADA) --- */
+        /* --- HERO SECTION (Portada) --- */
         header {
-            background: linear-gradient(rgba(0, 43, 91, 0.98), rgba(0, 43, 91, 0.92)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 43, 91, 0.97), rgba(0, 43, 91, 0.93)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: top center;
             color: var(--blanco);
-            /* Ajuste de padding porque quitamos el H1 */
-            padding: 30px 20px 100px; 
+            padding: 40px 20px 120px; 
             text-align: center;
-            border-top: 4px solid var(--dorado);
+            border-top: 5px solid var(--dorado);
         }
 
-        /* Estilo del slogan más grande y protagonista */
         .tagline {
-            font-size: 2.2em; /* Mucho más grande */
-            font-weight: 700; /* Negrita */
-            max-width: 900px;
+            font-size: 2.5em; /* Texto más impactante */
+            font-weight: 800;
+            max-width: 950px;
             margin: 0 auto;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--dorado);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        /* --- SECCIONES PRINCIPALES (SIN CAMBIOS) --- */
+        /* --- SECCIONES PRINCIPALES --- */
         .container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .intro-text {
             text-align: center;
-            font-size: 1.3em;
-            margin-bottom: 60px;
-            color: #444;
-            max-width: 900px;
+            font-size: 1.4em;
+            margin-bottom: 70px;
+            color: #333;
+            max-width: 950px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 500;
         }
 
-        /* Misión y Visión Estilizadas */
+        /* --- MISIÓN Y VISIÓN INTERACTIVAS --- */
         .mv-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
+            gap: 50px;
+            margin-bottom: 70px;
         }
 
         .mv-card {
             background: var(--gris-claro);
-            padding: 40px;
-            border-radius: 12px;
-            border-top: 5px solid var(--dorado);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 45px;
+            border-radius: 15px;
+            border-top: 6px solid var(--dorado);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s ease; /* Transición suave */
+        }
+
+        .mv-card:hover {
+            transform: translateY(-8px); /* Se levanta al pasar el mouse */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-top-color: var(--azul-marino); /* Cambia el color del borde superior */
         }
 
         .mv-card h2 {
             color: var(--azul-marino);
             margin-top: 0;
-            font-size: 1.8em;
+            font-size: 2em;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Servicios Simplificados */
+        /* --- SERVICIOS PROFESIONALES E INTERACTIVOS --- */
         .servicios-section {
-            background-color: var(--azul-marino);
+            background: linear-gradient(to bottom, var(--azul-marino), #001f44); /* Degradado sutil */
             color: var(--blanco);
-            padding: 70px 20px;
+            padding: 90px 20px;
             text-align: center;
         }
 
         .servicios-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 40px auto 0;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 35px;
+            max-width: 1150px;
+            margin: 50px auto 0;
         }
 
         .servicio-item {
-            background: rgba(255,255,255,0.05);
-            padding: 25px 20px;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            border-radius: 8px;
-            transition: 0.3s;
+            background: rgba(255,255,255,0.03);
+            padding: 35px 25px;
+            border: 2px solid rgba(197, 160, 89, 0.4);
+            border-radius: 12px;
+            /* Interactividad completa */
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            cursor: default;
+            position: relative;
+            overflow: hidden;
         }
 
+        /* Efecto Hover Premium */
         .servicio-item:hover {
-            background: rgba(197, 160, 89, 0.1);
+            background: rgba(197, 160, 89, 0.18); /* Fondo dorado sutil */
             border-color: var(--dorado);
+            transform: translateY(-10px) scale(1.03); /* Se agranda y levanta */
+            box-shadow: 0 15px 35px var(--sombra-dorada); /* Sombra dorada elegante */
+        }
+
+        /* Efecto de brillo al pasar el mouse */
+        .servicio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.6s;
+        }
+        .servicio-item:hover::before {
+            left: 100%;
         }
 
         .servicio-item h3 {
             color: var(--dorado);
-            font-size: 1.3em;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        /* Footer */
+        /* --- FOOTER --- */
         footer {
-            background-color: #0a1a2a;
-            color: #aaa;
+            background-color: #081420;
+            color: #999;
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9em;
+            padding: 50px 20px;
+            font-size: 1em;
+            border-top: 4px solid var(--dorado);
         }
 
-        /* Botón Flotante WhatsApp */
+        /* --- BOTÓN WHATSAPP --- */
         .wa-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 35px;
+            right: 35px;
             background-color: #25D366;
             color: white;
-            padding: 15px 25px;
+            padding: 16px 28px;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 800;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            font-size: 1.1em;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            font-size: 1.15em;
             z-index: 100;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
 
         .wa-float:hover {
             background-color: #1ebe57;
-            transform: translateY(-3px);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
         }
 
+        /* --- RESPONSIVO --- */
         @media (max-width: 768px) {
-            .mv-grid { grid-template-columns: 1fr; }
-            .tagline { font-size: 1.5em; }
-            .intro-text { font-size: 1.1em; }
-            .logo-wrapper-wide { width: 90%; }
+            .mv-grid { grid-template-columns: 1fr; gap: 30px; }
+            .tagline { font-size: 1.8em; }
+            .intro-text { font-size: 1.2em; }
+            .logo-wrapper-wide { width: 94%; padding: 15px; }
+            header { padding-bottom: 80px; }
+            .container { padding: 50px 20px; }
         }
     </style>
 </head>
@@ -232,21 +266,21 @@
     </div>
 
     <div class="servicios-section">
-        <h2 style="color: white; text-transform: uppercase; letter-spacing: 1px;">Ecosistema de Servicios en Expansión</h2>
+        <h2 style="color: white; text-transform: uppercase; letter-spacing: 2px; font-size: 2em;">Ecosistema de Servicios en Expansión</h2>
         <div class="servicios-grid">
             <div class="servicio-item">
                 <h3>Gestión Administrativa</h3>
-                <p>Organización documental, trámites y formalización de negocios con eficiencia.</p>
+                <p>Organización documental, trámites y formalización de negocios con eficiencia y orden.</p>
             </div>
             <div class="servicio-item">
                 <h3>Soporte Tecnológico</h3>
-                <p>Soluciones digitales, automatización y asistencia técnica funcional y organizada.</p>
+                <p>Soluciones digitales, automatización y asistencia técnica funcional, sin complicaciones.</p>
             </div>
             <div class="servicio-item">
                 <h3>Logística Operativa</h3>
-                <p>Apoyo práctico, transporte ligero y soluciones de movimiento inmediatas.</p>
+                <p>Apoyo práctico, transporte ligero y soluciones de movimiento inmediatas para tu día a día.</p>
             </div>
-            <div class="servicio-item" style="border-color: var(--dorado);">
+            <div class="servicio-item" style="border-color: var(--dorado); background: rgba(197, 160, 89, 0.08);">
                 <h3>Hospitalidad y Eventos</h3>
                 <p>Coordinación de personal (meseros, bartenders) y DJs para crear experiencias memorables.</p>
             </div>
@@ -255,10 +289,10 @@
 
     <footer>
         <p>&copy; 2026 AG Multi-Services, LLC. Puerto Rico.</p>
-        <p><em>Innovando para hacerte la vida más fácil.</em></p>
-        <div style="margin-top: 25px;">
-            <a href="https://instagram.com/agservicespr" style="color: var(--dorado); text-decoration: none; margin: 0 15px; font-weight: bold;">Instagram</a> |
-            <a href="https://facebook.com/agservices" style="color: var(--dorado); text-decoration: none; margin: 0 15px; font-weight: bold;">Facebook</a>
+        <p style="font-style: italic; color: var(--dorado);">Innovando para hacerte la vida más fácil.</p>
+        <div style="margin-top: 30px;">
+            <a href="https://instagram.com/agservicespr" style="color: var(--dorado); text-decoration: none; margin: 0 20px; font-weight: 700; letter-spacing: 1px;">INSTAGRAM</a> |
+            <a href="https://facebook.com/agservices" style="color: var(--dorado); text-decoration: none; margin: 0 20px; font-weight: 700; letter-spacing: 1px;">FACEBOOK</a>
         </div>
     </footer>
 
