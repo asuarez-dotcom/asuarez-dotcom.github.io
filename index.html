@@ -6,8 +6,8 @@
     <title>AG Multi-Services | Innovación Accesible en PR</title>
     <style>
         :root {
-            --azul-marino: #002B5B; /* El azul de tu marca */
-            --dorado: #C5A059;      /* El dorado de tu logo */
+            --azul-marino: #002B5B;
+            --dorado: #C5A059;
             --blanco: #ffffff;
             --gris-claro: #f4f6f8;
             --texto-oscuro: #1a1a1a;
@@ -22,17 +22,17 @@
             line-height: 1.6;
         }
 
-        /* --- NAVEGACIÓN Y LOGO --- */
+        /* --- NAVEGACIÓN Y LOGO (AJUSTADO) --- */
         nav {
             background-color: var(--azul-marino);
-            padding: 20px 0;
+            padding: 15px 0; /* Reduje el espacio vertical */
             text-align: center;
             border-bottom: 4px solid var(--dorado);
         }
 
         .logo-container {
-             width: 160px;
-             height: 160px;
+             width: 140px;  /* MUCHO MÁS PEQUEÑO (antes 280px) */
+             height: 140px;
              margin: 0 auto;
              border-radius: 50%;
              border: 3px solid var(--dorado);
@@ -45,40 +45,35 @@
         }
 
         .logo-img {
-            max-width: 100%; 
+            max-width: 90%; /* El logo llena bien el círculo pequeño */
             height: auto;
             display: block;
         }
 
-        /* --- HERO SECTION (Portada) --- */
+        /* --- HERO SECTION (Portada AJUSTADA) --- */
         header {
             background: linear-gradient(rgba(0, 43, 91, 0.95), rgba(0, 43, 91, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--blanco);
-            padding: 100px 20px;
+            padding: 80px 20px; /* Reduje un poco el padding */
             text-align: center;
         }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--dorado);
-        }
+        /* H1 eliminado del CSS porque ya no se usa en el HTML */
 
         .tagline {
-            font-size: 1.8em;
-            font-weight: 300;
+            font-size: 2.2em; /* Aumenté el tamaño porque ahora es el texto principal */
+            font-weight: 700;
             max-width: 800px;
             margin: 0 auto;
-            border-top: 1px solid var(--dorado);
-            padding-top: 20px;
+            /* Borde superior eliminado */
+            color: var(--dorado);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* --- SECCIONES PRINCIPALES --- */
+        /* --- SECCIONES PRINCIPALES (SIN CAMBIOS) --- */
         .container {
             max-width: 1100px;
             margin: auto;
@@ -95,7 +90,6 @@
             margin-right: auto;
         }
 
-        /* Misión y Visión Estilizadas */
         .mv-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -118,7 +112,6 @@
             text-transform: uppercase;
         }
 
-        /* Servicios Simplificados */
         .servicios-section {
             background-color: var(--azul-marino);
             color: var(--blanco);
@@ -153,7 +146,6 @@
             margin-bottom: 15px;
         }
 
-        /* Footer */
         footer {
             background-color: #0a1a2a;
             color: #aaa;
@@ -162,7 +154,6 @@
             font-size: 0.9em;
         }
 
-        /* Botón Flotante WhatsApp */
         .wa-float {
             position: fixed;
             bottom: 30px;
@@ -186,8 +177,7 @@
 
         @media (max-width: 768px) {
             .mv-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 2.2em; }
-            .tagline { font-size: 1.4em; }
+            .tagline { font-size: 1.6em; }
             .intro-text { font-size: 1.1em; }
         }
     </style>
@@ -201,7 +191,6 @@
     </nav>
 
     <header>
-        <h1>AG MULTI-SERVICES</h1>
         <p class="tagline">Innovación Accesible y Funcional.</p>
     </header>
 
@@ -262,7 +251,3 @@
 
 </body>
 </html>
-
-
-
-
